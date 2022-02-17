@@ -89,6 +89,12 @@ input {
     background-color: whitesmoke;
 }
 
+#add-recipe-button:hover {
+    transition: 0.2s;
+    background-color: #95a5a6;
+    color:whitesmoke;
+}
+
 #cook-button {
     background-color: #0fb9b1;
     height: 34px;
@@ -99,7 +105,7 @@ input {
 
 #cook-button:hover {
     transition: 0.2s;
-    background-color: #27dfd5;
+    background-color: #95a5a6;
     color:whitesmoke;
 }
 
