@@ -5,18 +5,18 @@ teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
-
 */
-
-/* * {
+/* 
+* {
     border: 2px solid rgb(216, 158, 158);
 } */
-
-/* .box-item {
+/* 
+.box-item {
     background-color: yellow;
     border: 1px solid black;
 } */
 
+/* Elements */
 body {
     font-family: 'Roboto', sans-serif;
     background-image: url("assets/burger-friends.jpg");
@@ -28,15 +28,21 @@ main {
     margin: 40px;
 }
 
-h1{
+h1 {
     font-size: 25px;
+}
+
+h2 {
+    font-size: 40px;
+    margin: 0px;
 }
 
 button {
     text-transform: uppercase;
     border-radius: 4px;
     border: 0px;
-    padding: 8px;
+    padding: 10px;
+    opacity: 0.9;
 }
 
 input {
@@ -45,6 +51,15 @@ input {
     margin-left: 30px;
 }
 
+p {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    margin: 0px;
+    margin-top: 100px
+}
+
+/* Classes */
 .navbar {
     background-color: #0fb9b1;
     height: 20px;
@@ -77,25 +92,57 @@ input {
 
 .food-options {
     font-size: 20px;
-    /* margin: 15px; */
-    /* margin-left: 20px; */
 }
 
-.food-image {
+.suggestion {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
 }
 
+.hidden {
+    display: none;
+}
+
+/* Id's */
 #add-recipe-button {
     background-color: whitesmoke;
 }
 
+#add-recipe-button:hover {
+    transition: 0.2s;
+    background-color: #95a5a6;
+    color:whitesmoke;
+}
+
 #cook-button {
     background-color: #0fb9b1;
-    height: 34px;
+    height: 35px;
     width: 175px;
     margin-left: 30px;
     margin-top: 8px;
+}
+
+#cook-button:hover {
+    transition: 0.2s;
+    background-color: #95a5a6;
+    color:whitesmoke;
+}
+
+#clear-button {
+    background-color: #95a5a6;
+    height: 35px;
+    width: 100px;
+    margin-left: 335px;
+    margin-top: 20%;
+    color:whitesmoke;
+}
+
+#clear-button:hover {
+    transition: 0.2s;
+    background-color: #0fb9b1;
+    color:whitesmoke;
 }
 
 #food-question {
@@ -108,4 +155,3 @@ input {
     width: 150px;
     height: 150px;
 }
-
