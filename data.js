@@ -11,7 +11,7 @@ var sides = [
     "Hush Puppies"
 ];
 
-var mains = [
+var dishes = [
     "Spaghetti and Meatballs",
     "Pineapple Chicken",
     "Shakshuka",
