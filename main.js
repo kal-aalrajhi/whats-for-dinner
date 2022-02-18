@@ -44,7 +44,7 @@ function randomizeFoodItem(foodType) {
     } else if (foodType === "desserts") {
         return desserts[randomIndex(desserts)];
     } else {
-        return "Make another selection";
+        return "Another Selection";
     }
 }
 

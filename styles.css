@@ -6,15 +6,15 @@ frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
 */
-
+/* 
 * {
     border: 2px solid rgb(216, 158, 158);
-}
-
+} */
+/* 
 .box-item {
     background-color: yellow;
     border: 1px solid black;
-}
+} */
 
 /* Elements */
 body {
@@ -56,6 +56,7 @@ p {
     font-style: italic;
     font-weight: bold;
     margin: 0px;
+    margin-top: 100px
 }
 
 /* Classes */
@@ -117,7 +118,7 @@ p {
 
 #cook-button {
     background-color: #0fb9b1;
-    height: 34px;
+    height: 35px;
     width: 175px;
     margin-left: 30px;
     margin-top: 8px;
@@ -131,9 +132,10 @@ p {
 
 #clear-button {
     background-color: #95a5a6;
-    height: 34px;
-    width: 175px;
-    margin-left: 50%;
+    height: 35px;
+    width: 100px;
+    margin-left: 335px;
+    margin-top: 20%;
     color:whitesmoke;
 }
 
