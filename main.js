@@ -29,13 +29,12 @@ function displayRandFood(randFood) {
     foodSuggestion[1].innerText = randFood;
 }
 
-// function hideRandFood() {
-//     cookPotImg.classList.add('hidden');
-//     foodSuggestion[0].classList.remove('hidden');
-//     foodSuggestion[1].classList.remove('hidden');
-//     foodSuggestion[2].classList.remove('hidden');
-//     foodSuggestion[1].innerText = randFood;
-// }
+function hideRandFood() {
+    cookPotImg.classList.remove('hidden');
+    foodSuggestion[0].classList.add('hidden');
+    foodSuggestion[1].classList.add('hidden');
+    foodSuggestion[2].classList.add('hidden');
+}
 
 function randomizeFoodItem(foodType) {
     if (foodType === "sides") {
