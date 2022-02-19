@@ -5,11 +5,15 @@ var foodChoices = document.getElementsByName('food-choice');
 var cookPotImg = document.querySelector('#cook-pot-image');
 var foodSuggestion = document.querySelectorAll('.food-suggestion');
 var addRecipeButton = document.querySelector('#add-recipe-button');
+var addNewButton = document.querySelector('#add-new-button');
+var addFoodForm = document.querySelector('.add-food-form');
+
 
 // Event listeners
 letsCookButton.addEventListener('click', submitChoice);
 clearButton.addEventListener('click', hideRandFood);
 addRecipeButton.addEventListener('click', revealRecipeForm);
+addNewButton.addEventListener('click', addNewRecipe);
 
 // Functions
 function submitChoice() {
@@ -37,14 +41,14 @@ function hideRandFood() {
 }
 
 function randomizeFoodItem(foodType) {
-    if (foodType === "sides") {
+    if (foodType === 'sides') {
         return sides[randomIndex(sides)];
-    } else if (foodType === "dishes") {
+    } else if (foodType === 'dishes') {
         return dishes[randomIndex(dishes)];
-    } else if (foodType === "desserts") {
+    } else if (foodType === 'desserts') {
         return desserts[randomIndex(desserts)];
     } else {
-        return "Another Selection";
+        return 'Another Selection';
     }
 }
 
@@ -53,14 +57,29 @@ function randomIndex(array) {
 }
 
 function revealRecipeForm() {
-    var addFoodForm = document.querySelector(".add-food-form");
-    addFoodForm.innerHTML = `       
-    <form class="food-form">
-        <label for="recipe-type">Recipe Type:</label>
-        <input class="add-food" type="text" id="recipe-type">
-        <label for="recipe-name">Recipe Name:</label>
-        <input class="add-food" type="text" id="recipe-name">
-        <button id="add-new-button">Add new</button>
-    </form>`
     addFoodForm.classList.toggle('hidden');
+    clearRecipeForm();
+}
+
+function addNewRecipe() {
+    event.preventDefault();
+    var recipeType = document.querySelector('#recipe-type').value.toLowerCase();
+    var recipeName = document.querySelector('#recipe-name').value;
+    
+    if (recipeType === 'side') {
+        sides.push(recipeName);
+    } else if (recipeType === 'main dish') {
+        dishes.push(recipeName);
+    } else if (recipeType === 'dessert') {
+        desserts.push(recipeName);
+    } else {
+        alert("Invalid recipe type. Must choose: side, main dish or dessert.")
+    }
+    clearRecipeForm();
+
+}
+
+function clearRecipeForm() {
+    document.querySelector('#recipe-type').value = "";
+    document.querySelector('#recipe-name').value = "";
 }
