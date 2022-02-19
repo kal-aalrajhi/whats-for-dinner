@@ -4,12 +4,12 @@ var clearButton = document.querySelector('#clear-button');
 var foodChoices = document.getElementsByName('food-choice');
 var cookPotImg = document.querySelector('#cook-pot-image');
 var foodSuggestion = document.querySelectorAll('.food-suggestion');
-// var foodSuggestion = document.querySelector('.suggestion');
-// var randFood = "";
+var addRecipeButton = document.querySelector('#add-recipe-button');
 
 // Event listeners
 letsCookButton.addEventListener('click', submitChoice);
 clearButton.addEventListener('click', hideRandFood);
+addRecipeButton.addEventListener('click', addFood);
 
 // Functions
 function submitChoice() {
