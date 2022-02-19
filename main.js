@@ -73,7 +73,9 @@ function addNewRecipe() {
     } else if (recipeType === 'dessert') {
         desserts.push(recipeName);
     } else {
-        alert("Invalid recipe type. Must choose: side, main dish or dessert.")
+        alert("Invalid recipe type. Must choose: side, main dish or dessert.");
+        clearRecipeForm();
+        return;
     }
     displayRandFood(recipeName);
     clearRecipeForm();
