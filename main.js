@@ -9,7 +9,7 @@ var addRecipeButton = document.querySelector('#add-recipe-button');
 // Event listeners
 letsCookButton.addEventListener('click', submitChoice);
 clearButton.addEventListener('click', hideRandFood);
-addRecipeButton.addEventListener('click', addFood);
+addRecipeButton.addEventListener('click', revealRecipeForm);
 
 // Functions
 function submitChoice() {
@@ -50,4 +50,17 @@ function randomizeFoodItem(foodType) {
 
 function randomIndex(array) {
     return Math.floor(Math.random() * array.length);
+}
+
+function revealRecipeForm() {
+    var addFoodForm = document.querySelector(".add-food-form");
+    addFoodForm.innerHTML = `       
+    <form class="food-form">
+        <label for="recipe-type">Recipe Type:</label>
+        <input class="add-food" type="text" id="recipe-type">
+        <label for="recipe-name">Recipe Name:</label>
+        <input class="add-food" type="text" id="recipe-name">
+        <button id="add-new-button">Add new</button>
+    </form>`
+    addFoodForm.classList.toggle('hidden');
 }

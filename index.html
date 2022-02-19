@@ -37,13 +37,15 @@
         </section>
       </section>
     </main>
-    <form id="add-food-form">
-      <h3>Recipe Type:</h3>
-      <input class="add-food" type="text" name="recipe-type">
-      <h3>Recipe Name:</h3>
-      <input class="add-food" type="text" name="recipe-name">
-      <button id="add-new-button">Add new</button>
-    </form>
+    <section class="add-food-form hidden">
+      <form class="food-form">
+        <label for="recipe-type">Recipe Type:</label>
+        <input class="add-food" type="text" id="recipe-type">
+        <label for="recipe-name">Recipe Name:</label>
+        <input class="add-food" type="text" id="recipe-name">
+        <button id="add-new-button">Add new</button>
+      </form>
+    </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
   <script type="text/javascript" src="data.js"></script>
