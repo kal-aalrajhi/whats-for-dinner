@@ -19,7 +19,7 @@ addNewButton.addEventListener('click', addNewRecipe);
 function submitChoice() {
     for (var i = 0; i < foodChoices.length; i++) {
         if(foodChoices[i].checked) {
-            randFood = randomizeFoodItem(foodChoices[i].value);
+            var randFood = randomizeFoodItem(foodChoices[i].value);
             displayRandFood(randFood);
         }
     }
@@ -75,8 +75,8 @@ function addNewRecipe() {
     } else {
         alert("Invalid recipe type. Must choose: side, main dish or dessert.")
     }
+    displayRandFood(recipeName);
     clearRecipeForm();
-
 }
 
 function clearRecipeForm() {
