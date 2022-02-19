@@ -40,6 +40,11 @@ h2 {
     margin: 0px;
 }
 
+h3 {
+    font-size: 22px;
+    margin-left: 30px;
+}
+
 button {
     text-transform: uppercase;
     border-radius: 4px;
@@ -114,6 +119,8 @@ p {
     width: 180px;
     border: 1px solid #95a5a6; 
     font-size: 22px;
+    margin-left: 5px;
+    margin-right: 8px;
 }
 
 /* Id's */
@@ -184,6 +191,7 @@ p {
     background-color: #0fb9b1;
     height: 40px;
     width: 100px;
+    margin-left: 20px;
 }
 
 #add-new-button:hover {
